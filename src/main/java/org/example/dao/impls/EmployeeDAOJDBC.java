@@ -1,5 +1,6 @@
-package org.example.dao;
+package org.example.dao.impls;
 
+import org.example.dao.EmployeeDAO;
 import org.example.models.Employee;
 
 import java.sql.*;
@@ -107,6 +108,27 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
     }
 
     @Override
+    public void updateEmployee(Employee employee) {
+        String query = "UPDATE employee SET first_name=?, last_name=?, gender=?, age=?, city_id=? WHERE id=?";
+
+        try {
+            Connection connection = getConnection();
+
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, employee.getFirstName());
+            statement.setString(2, employee.getLastName());
+            statement.setString(3, employee.getGender());
+            statement.setInt(4, employee.getAge());
+            statement.setInt(5, employee.getCityId());
+            statement.setInt(6, employee.getId());
+
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public void deleteEmployee(int id) {
         String query = "DELETE FROM employee WHERE id=?";
 
@@ -115,6 +137,22 @@ public class EmployeeDAOJDBC implements EmployeeDAO {
 
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setInt(1, id);
+
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void deleteEmployee(Employee employee) {
+        String query = "DELETE FROM employee WHERE id=?";
+
+        try {
+            Connection connection = getConnection();
+
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, employee.getId());
 
             statement.executeUpdate();
         } catch (SQLException e) {

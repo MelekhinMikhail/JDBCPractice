@@ -1,12 +1,30 @@
 package org.example.models;
 
+import javax.persistence.*;
+import java.util.Objects;
+
+@Entity
+@Table(name = "employee")
 public class Employee {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
+
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "gender")
     private String gender;
+
+    @Column(name = "age")
     private Integer age;
+
+    @Column(name = "city_id")
     private Integer cityId;
 
     public Employee(Integer id, String firstName, String lastName, String gender, Integer age, Integer cityId) {
@@ -26,6 +44,9 @@ public class Employee {
         this.cityId = cityId;
     }
 
+    public Employee() {
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -36,6 +57,19 @@ public class Employee {
                 ", age=" + age +
                 ", cityId=" + cityId +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(id, employee.id) && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(gender, employee.gender) && Objects.equals(age, employee.age) && Objects.equals(cityId, employee.cityId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, gender, age, cityId);
     }
 
     public int getId() {
