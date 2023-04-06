@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cead555-f272-4024-86ea-eb6c26599ca5" name="Changes" comment="Task 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/impls/EmployeeDAOHibernate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/HibernateSessionFactoryUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="1cead555-f272-4024-86ea-eb6c26599ca5" name="Changes" comment="Homework 3 done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CityDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/impls/CityDAOHibernate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/impls/EmployeeDAOJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/impls/EmployeeDAOJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/impls/EmployeeDAOJDBC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Employee.java" afterDir="false" />
     </list>
@@ -32,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw1" />
+        <entry key="$PROJECT_DIR$" value="hw3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +54,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/Admin/IdeaProjects/JDBC_Practice_hw",
     "node.js.detected.package.eslint": "true",
@@ -82,7 +78,7 @@
       <updated>1680545389131</updated>
       <workItem from="1680545390531" duration="3949000" />
       <workItem from="1680599938110" duration="976000" />
-      <workItem from="1680764794924" duration="4383000" />
+      <workItem from="1680764794924" duration="8221000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1680545754973</created>
@@ -105,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680549213307</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Homework 3 done">
+      <created>1680769507084</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680769507084</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +129,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Task 1" />
     <MESSAGE value="Task 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 2" />
+    <MESSAGE value="Homework 3 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework 3 done" />
   </component>
 </project>

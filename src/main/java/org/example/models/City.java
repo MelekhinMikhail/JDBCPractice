@@ -1,7 +1,6 @@
 package org.example.models;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Table(name = "city")
@@ -20,6 +19,10 @@ public class City {
         this.name = name;
     }
 
+    public City(String name) {
+        this.name = name;
+    }
+
     public City() {
     }
 
@@ -29,19 +32,6 @@ public class City {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        City city = (City) o;
-        return id == city.id && Objects.equals(name, city.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name);
     }
 
     public int getId() {

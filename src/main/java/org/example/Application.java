@@ -1,24 +1,32 @@
 package org.example;
 
+import org.example.dao.CityDAO;
 import org.example.dao.EmployeeDAO;
+import org.example.dao.impls.CityDAOHibernate;
 import org.example.dao.impls.EmployeeDAOHibernate;
+import org.example.models.City;
 import org.example.models.Employee;
 
 public class Application {
     public static void main(String[] args) {
         EmployeeDAO employeeDAO = new EmployeeDAOHibernate();
+        CityDAO cityDAO = new CityDAOHibernate();
 
-        employeeDAO.addEmployee(new Employee("Alex", "Margunov", "male", 30, 3));
+        System.out.println(employeeDAO.getEmployee(4));
 
         employeeDAO.getAllEmployees().forEach(System.out::println);
 
-        employeeDAO.updateEmployee(10, new Employee("Alex", "Ivanovv", "male", 31, 3));
+        employeeDAO.addEmployee(new Employee("Jack", "Johnson", "male", 57, new City("Washington")));
 
-        employeeDAO.updateEmployee(new Employee(11, "Alex", "Olegov", "female", 28, 4));
+        employeeDAO.deleteEmployee(13);
 
-        employeeDAO.deleteEmployee(10);
+        cityDAO.addCity(new City("Paris"));
 
-        employeeDAO.deleteEmployee(new Employee(12, "Alex", "Margunov", "male", 30, 3));
+        cityDAO.deleteCity(new City(7, "Paris"));
+
+        cityDAO.getAllCities().forEach(System.out::println);
+
+        cityDAO.updateCity(new City(8, "Barcelona"));
     }
 
 }
